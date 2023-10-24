@@ -1,12 +1,60 @@
 ---
 title: "Assignment 1"
-date: "2022-10-01"
+author: "Sezgi Ayhan"
+date: today
+format: 
+  html:
+    number-sections: True
+editor: visual
+categories:
+  - About Me
+  - Creating Data science Portfolio with Quarto
+  - Dataset
+  - R posts
 ---
 
-This is a template example qmd output page. You may see an example R code below.
+::: class
+## About me
+
+Sezgi Ayhan, as an Investor Relations Coordinator, I leverage my 12 years of experience and expertise in capital markets, corporate finance, and ESG issues to communicate effectively with institutional investors and analysts. I aim to enhance the quality of datasets and their visualization in materials presented to investors and conduct an analysis to measure the impact of company disclosures on investors' decision making process. Most importantly, I seek a deeper understanding of the algorithmic trading and traders' behaviors.
+:::
+
+[![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezgi-ayhan-75ab6913)
+
+## Creating Data science Portfolio with Quarto
+
+Here's the video that I chose from tutorial videos: [Creating Data science Portfolio with Quarto](https://www.youtube.com/watch?v=xtSFXtDf4cM&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=6)
+
+Deepsha Menghani created a blog about herself using quarto, conceptually very similar to this assignment. She designed her page with a navigation toolbar and positioned each sections. She used jolla template in about.qmd to create about page, inserting images and links with icons.. She created projects.qmd and listings with contents of posts which is a directory defined for this blog. She further personalized the page with customized themes and used code tools.
+
+## Dataset
+
+Dataset that I've chosen to illustrate in this page is a historical dataset on the modern Olympic Games, 15 different data variables were defined in order to be explored and analyzed.
 
 ```{r}
-set.seed(1)
-vec1 <- sample(LETTERS,5)
-paste0(vec1,collapse="")
+library(ggplot2)
+library(grid)
+library(dplyr)
+
+event <- read.csv("./athlete_events.csv")
+head(event)
+summary(event)
+names(event)
+# Clean
+event$Sex <-  as.factor(event$Sex)
+event$Season <- as.factor(event$Season)
+event$Medal <-  as.factor(event$Medal)
+#test
+summary(event)
+event %>% group_by(Sex)%>% count(Medal)
 ```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+\`\`\`
