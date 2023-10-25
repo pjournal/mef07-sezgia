@@ -37,25 +37,7 @@ library(grid)
 library(dplyr)
 
 event <- read.csv("./athlete_events.csv")
-head(event)
 summary(event)
-names(event)
-# Clean
-# Test Sezo 26 01:12
-event$Sex <-  as.factor(event$Sex)
-event$Season <- as.factor(event$Season)
-event$Medal <-  as.factor(event$Medal)
-#test
-summary(event)
-event %>% group_by(Sex)%>% count(Medal)
-```
-
-```{r}
+filter(event, Age == 10)
 
 ```
-
-```{r}
-
-```
-
-\`\`\`

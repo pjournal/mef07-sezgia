@@ -321,11 +321,12 @@ Attaching package: 'dplyr'</code></pre>
  [9] "Games"  "Year"   "Season" "City"   "Sport"  "Event"  "Medal" </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Sex <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(event<span class="sc">$</span>Sex)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Season <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(event<span class="sc">$</span>Season)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Medal <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(event<span class="sc">$</span>Medal)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#test</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Test Sezo 26 01:12</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Sex <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(event<span class="sc">$</span>Sex)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Season <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(event<span class="sc">$</span>Season)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Medal <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(event<span class="sc">$</span>Medal)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#test</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       ID             Name           Sex             Age            Height     
  Min.   :     1   Length:271116      F: 74522   Min.   :10.00   Min.   :127.0  
