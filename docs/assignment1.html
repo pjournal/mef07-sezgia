@@ -256,31 +256,7 @@ Attaching package: 'dplyr'</code></pre>
     intersect, setdiff, setequal, union</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>event <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./athlete_events.csv"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  ID                     Name Sex Age Height Weight           Team NOC
-1  1                A Dijiang   M  24    180     80          China CHN
-2  2                 A Lamusi   M  23    170     60          China CHN
-3  3      Gunnar Nielsen Aaby   M  24     NA     NA        Denmark DEN
-4  4     Edgar Lindenau Aabye   M  34     NA     NA Denmark/Sweden DEN
-5  5 Christine Jacoba Aaftink   F  21    185     82    Netherlands NED
-6  5 Christine Jacoba Aaftink   F  21    185     82    Netherlands NED
-        Games Year Season      City         Sport
-1 1992 Summer 1992 Summer Barcelona    Basketball
-2 2012 Summer 2012 Summer    London          Judo
-3 1920 Summer 1920 Summer Antwerpen      Football
-4 1900 Summer 1900 Summer     Paris    Tug-Of-War
-5 1988 Winter 1988 Winter   Calgary Speed Skating
-6 1988 Winter 1988 Winter   Calgary Speed Skating
-                               Event Medal
-1        Basketball Men's Basketball  &lt;NA&gt;
-2       Judo Men's Extra-Lightweight  &lt;NA&gt;
-3            Football Men's Football  &lt;NA&gt;
-4        Tug-Of-War Men's Tug-Of-War  Gold
-5   Speed Skating Women's 500 metres  &lt;NA&gt;
-6 Speed Skating Women's 1,000 metres  &lt;NA&gt;</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       ID             Name               Sex                 Age       
  Min.   :     1   Length:271116      Length:271116      Min.   :10.00  
@@ -315,69 +291,16 @@ Attaching package: 'dplyr'</code></pre>
                                                          
                                                          </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(event, Age <span class="sc">==</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "ID"     "Name"   "Sex"    "Age"    "Height" "Weight" "Team"   "NOC"   
- [9] "Games"  "Year"   "Season" "City"   "Sport"  "Event"  "Medal" </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Test Sezo 26 01:12</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Sex <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(event<span class="sc">$</span>Sex)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Season <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(event<span class="sc">$</span>Season)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>event<span class="sc">$</span>Medal <span class="ot">&lt;-</span>  <span class="fu">as.factor</span>(event<span class="sc">$</span>Medal)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#test</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       ID             Name           Sex             Age            Height     
- Min.   :     1   Length:271116      F: 74522   Min.   :10.00   Min.   :127.0  
- 1st Qu.: 34643   Class :character   M:196594   1st Qu.:21.00   1st Qu.:168.0  
- Median : 68205   Mode  :character              Median :24.00   Median :175.0  
- Mean   : 68249                                 Mean   :25.56   Mean   :175.3  
- 3rd Qu.:102097                                 3rd Qu.:28.00   3rd Qu.:183.0  
- Max.   :135571                                 Max.   :97.00   Max.   :226.0  
-                                                NA's   :9474    NA's   :60171  
-     Weight          Team               NOC               Games          
- Min.   : 25.0   Length:271116      Length:271116      Length:271116     
- 1st Qu.: 60.0   Class :character   Class :character   Class :character  
- Median : 70.0   Mode  :character   Mode  :character   Mode  :character  
- Mean   : 70.7                                                           
- 3rd Qu.: 79.0                                                           
- Max.   :214.0                                                           
- NA's   :62875                                                           
-      Year         Season           City              Sport          
- Min.   :1896   Summer:222552   Length:271116      Length:271116     
- 1st Qu.:1960   Winter: 48564   Class :character   Class :character  
- Median :1988                   Mode  :character   Mode  :character  
- Mean   :1978                                                        
- 3rd Qu.:2002                                                        
- Max.   :2016                                                        
-                                                                     
-    Event              Medal       
- Length:271116      Bronze: 13295  
- Class :character   Gold  : 13372  
- Mode  :character   Silver: 13116  
-                    NA's  :231333  
-                                   
-                                   
-                                   </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>event <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Sex)<span class="sc">%&gt;%</span> <span class="fu">count</span>(Medal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8 × 3
-# Groups:   Sex [2]
-  Sex   Medal       n
-  &lt;fct&gt; &lt;fct&gt;   &lt;int&gt;
-1 F     Bronze   3771
-2 F     Gold     3747
-3 F     Silver   3735
-4 F     &lt;NA&gt;    63269
-5 M     Bronze   9524
-6 M     Gold     9625
-7 M     Silver   9381
-8 M     &lt;NA&gt;   168064</code></pre>
+<pre><code>     ID               Name Sex Age Height Weight                          Team
+1 71691 Dimitrios Loundras   M  10     NA     NA Ethnikos Gymnastikos Syllogos
+  NOC       Games Year Season   City      Sport
+1 GRE 1896 Summer 1896 Summer Athina Gymnastics
+                                  Event  Medal
+1 Gymnastics Men's Parallel Bars, Teams Bronze</code></pre>
 </div>
 </div>
-<p>```</p>
 
 
 </section>
