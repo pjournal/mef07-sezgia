@@ -41,6 +41,7 @@ head(event)
 summary(event)
 names(event)
 # Clean
+# Test Sezo 26 01:12
 event$Sex <-  as.factor(event$Sex)
 event$Season <- as.factor(event$Season)
 event$Medal <-  as.factor(event$Medal)
