@@ -19,24 +19,26 @@ categories:
 Sezgi Ayhan, as an Investor Relations Coordinator, I leverage my 12 years of experience and expertise in capital markets, corporate finance, and ESG issues to communicate effectively with institutional investors and analysts. I aim to enhance the quality of datasets and their visualization in materials presented to investors and conduct an analysis to measure the impact of company disclosures on investors' decision making process. Most importantly, I seek a deeper understanding of the algorithmic trading and traders' behaviors.
 :::
 
-[![LinkedIn Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezgi-ayhan-75ab6913) 
+[![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezgi-ayhan-75ab6913) 
 
+---
 
 ## Creating Data science Portfolio with Quarto
 
-Here's the video that I chose from tutorial videos: [Creating Data science Portfolio with Quarto](https://www.youtube.com/watch?v=xtSFXtDf4cM&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=6)
-
+Here's the video that I chose from tutorial videos:
+<p><a href="https://www.youtube.com/watch?v=xtSFXtDf4cM&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=6"> Creating Data science Portfolio with Quarto</a></p>
 
 
 Deepsha Menghani created a blog about herself using quarto, conceptually very similar to this assignment. She designed her page with a navigation toolbar and positioned each sections. She used jolla template in about.qmd to create about page, inserting images and links with icons.. She created projects.qmd and listings with contents of posts which is a directory defined for this blog. She further personalized the page with customized themes and used code tools.
 
-## Dataset
+## Propose a Dataset
+Dataset that I've chosen to illustrate in this page is a historical dataset on the modern Olympic Games, including all the Games from Athens 1896 to Rio 2016
 
-<!-- checkpoint 23-10-24:2138 -->
-
+[Data Source](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results/)
 ```{r}
-set.seed(1)
-vec1 <- sample(LETTERS,5)
-paste0(vec1,collapse="")
+
+library(tidyverse)
+
+
 ```
 ```
