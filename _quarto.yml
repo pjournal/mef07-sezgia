@@ -3,11 +3,12 @@ project:
   output-dir: docs
 
 book:
-  title: "[STUDENT/GROUP NAME] Progress Journal"
-  repo-url: https://github.com/pjournal/gh-pages-quarto-template
+  title: "[Sezgi Ayhan] Progress Journal"
+  repo-url: https://github.com/pjournal/mef07-sezgia
   chapters:
     - index.qmd
     - assignment1.qmd
+    - inclass1.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]
