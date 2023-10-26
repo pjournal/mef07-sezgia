@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "[Sezgi Ayhan Progress Journal"
+  title: "Sezgi Ayhan Progress Journal"
   repo-url: https://github.com/pjournal/mef07-sezgia
   chapters:
     - index.qmd
