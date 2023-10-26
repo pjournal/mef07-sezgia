@@ -15,6 +15,6 @@ book:
 
 format:
   html:
-  theme: cosmo
-
+    theme: cosmo
+  
 
