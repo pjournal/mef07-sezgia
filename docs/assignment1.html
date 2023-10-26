@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sezgi Ayhan">
-<meta name="dcterms.date" content="2023-10-25">
+<meta name="dcterms.date" content="2023-10-26">
 
 <title>[STUDENT/GROUP NAME] Progress Journal - 1&nbsp; Assignment 1</title>
 <style>
@@ -96,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
 
 
 </head>
@@ -178,7 +179,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me"><span class="header-section-number">1.1</span> About me</a></li>
   <li><a href="#creating-data-science-portfolio-with-quarto" id="toc-creating-data-science-portfolio-with-quarto" class="nav-link" data-scroll-target="#creating-data-science-portfolio-with-quarto"><span class="header-section-number">1.2</span> Creating Data science Portfolio with Quarto</a></li>
-  <li><a href="#propose-a-dataset" id="toc-propose-a-dataset" class="nav-link" data-scroll-target="#propose-a-dataset"><span class="header-section-number">1.3</span> Propose a Dataset</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset"><span class="header-section-number">1.3</span> Dataset</a></li>
+  <li><a href="#some-r-posts" id="toc-some-r-posts" class="nav-link" data-scroll-target="#some-r-posts"><span class="header-section-number">1.4</span> Some R Posts</a>
+  <ul class="collapse">
+  <li><a href="#pareto-chart" id="toc-pareto-chart" class="nav-link" data-scroll-target="#pareto-chart"><span class="header-section-number">1.4.1</span> Pareto Chart</a></li>
+  <li><a href="#bubble-chart" id="toc-bubble-chart" class="nav-link" data-scroll-target="#bubble-chart"><span class="header-section-number">1.4.2</span> Bubble Chart</a></li>
+  <li><a href="#creating-a-list" id="toc-creating-a-list" class="nav-link" data-scroll-target="#creating-a-list"><span class="header-section-number">1.4.3</span> Creating a List</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -210,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 25, 2023</p>
+      <p class="date">October 26, 2023</p>
     </div>
   </div>
   
@@ -220,121 +227,195 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="about-me" class="level2 class" data-number="1.1">
+<section id="about-me" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="about-me"><span class="header-section-number">1.1</span> About me</h2>
 <p>Sezgi Ayhan, as an Investor Relations Coordinator, I leverage my 12 years of experience and expertise in capital markets, corporate finance, and ESG issues to communicate effectively with institutional investors and analysts. I aim to enhance the quality of datasets and their visualization in materials presented to investors and conduct an analysis to measure the impact of company disclosures on investors’ decision making process. Most importantly, I seek a deeper understanding of the algorithmic trading and traders’ behaviors.</p>
-</section>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><a href="https://www.linkedin.com/in/sezgi-ayhan-75ab6913"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&amp;style=for-the-badge&amp;logo=linkedin&amp;logoColor=white&amp;color=071A2C" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<hr>
+</section>
 <section id="creating-data-science-portfolio-with-quarto" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="creating-data-science-portfolio-with-quarto"><span class="header-section-number">1.2</span> Creating Data science Portfolio with Quarto</h2>
-Here’s the video that I chose from tutorial videos:
-<p>
-<a href="https://www.youtube.com/watch?v=xtSFXtDf4cM&amp;list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&amp;index=6"> Creating Data science Portfolio with Quarto</a>
-</p>
+<p><strong>This is the video I selected from the tutorial collection</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"vembedr"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">"https://www.youtube.com/watch?v=xtSFXtDf4cM&amp;list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&amp;index=6"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/xtSFXtDf4cM" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+</div>
+</div>
 <p>Deepsha Menghani created a blog about herself using quarto, conceptually very similar to this assignment. She designed her page with a navigation toolbar and positioned each sections. She used jolla template in about.qmd to create about page, inserting images and links with icons.. She created projects.qmd and listings with contents of posts which is a directory defined for this blog. She further personalized the page with customized themes and used code tools.</p>
 </section>
-<section id="propose-a-dataset" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="propose-a-dataset"><span class="header-section-number">1.3</span> Propose a Dataset</h2>
-<p>Dataset that I’ve chosen to illustrate in this page is territorial emissions in MtCO₂ that were recorded between 1961 and 2021 and will be used for exhibiting the evolution of emissions and promote awareness, understanding, and action in the fight against climate change for specific regions in the world</p>
-<p><a href="https://globalcarbonatlas.org/emissions/carbon-emissions/">GO CARBON ATLAS FOR THIS DATASET</a></p>
+<section id="dataset" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="dataset"><span class="header-section-number">1.3</span> Dataset</h2>
+<p>The dataset I’ve selected for presentation on this page is a historical dataset pertaining to the modern Olympic Games. It comprises 15 distinct data variables designed for exploration and analysis.</p>
+<ol type="1">
+<li><strong>ID</strong> - Unique number for each athlete</li>
+<li><strong>Name</strong> - Athlete’s name</li>
+<li><strong>Sex</strong> - M or F</li>
+<li><strong>Age</strong> - Integer</li>
+<li><strong>Height</strong> - In centimeters</li>
+<li><strong>Weight</strong> - In kilograms</li>
+<li><strong>Team</strong> - Team name</li>
+<li><strong>NOC</strong> - National Olympic Committee 3-letter code</li>
+<li><strong>Games</strong> - Year and season</li>
+<li><strong>Year</strong> - Integer</li>
+<li><strong>Season</strong> - Summer or Winter</li>
+<li><strong>City</strong> - Host city</li>
+<li><strong>Sport</strong> - Sport</li>
+<li><strong>Event</strong> - Event</li>
+<li><strong>Medal</strong> - Gold, Silver, Bronze, or NA</li>
+</ol>
+<p><a href="https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results/data">Source Link</a></p>
+<p><strong>Here’s a code that displays athletes who are 10 years old</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the CSV file containing emission data</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>emission_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./docs/export_emissions-edited.csv"</span>, <span class="at">check.names=</span>F)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># emission_data</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the dataset for the year 2019 and values greater than 50</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>countries_greater_than_50_2019 <span class="ot">&lt;-</span> <span class="fu">subset</span>(emission_data, Year <span class="sc">==</span> <span class="dv">2019</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>countries_greater_than_50_2019</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>event <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./athlete_events.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(event, Age <span class="sc">==</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   Year Afghanistan Albania  Algeria Andorra  Angola Anguilla
-60 2019     11.0816  4.8269 178.5772 0.48365 19.2222  0.14656
-   Antigua and Barbuda Argentina Armenia   Aruba Australia Austria Azerbaijan
-60              0.6412  178.5116  6.2841 0.89035  415.8113 67.9562    37.7379
-   Bahamas Bahrain Bangladesh Barbados Belarus Belgium  Belize  Benin Bermuda
-60  2.4549 37.5831   100.7919   1.6667 62.0963 99.4703 0.70715 7.1161 0.59357
-   Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina
-60 1.4586 22.6051                           0.10992                20.8104
-   Botswana   Brazil British Virgin Islands Brunei Darussalam Bulgaria
-60   6.7821 473.4644                0.16488           10.7328  42.2327
-   Burkina Faso Burundi Cambodia Cameroon   Canada Cape Verde Cayman Islands
-60       5.5075 0.68883  18.2196   9.5918 578.5877    0.56059             NA
-   Central African Republic   Chad   Chile    China Colombia Comoros  Congo
-60                  0.22717 2.3031 91.9771 10721.04  94.4979 0.31144 7.2902
-   Cook Islands Costa Rica Croatia    Cuba Cura\xe7ao Cyprus Czech Republic
-60     0.084272     7.6984 17.8574 22.6188     2.2424 7.3423       101.0327
-   C\xf4te d'Ivoire Democratic Republic of the Congo Denmark Djibouti Dominica
-60          10.5351                           3.5922 30.9503  0.44862  0.17221
-   Dominican Republic Ecuador    Egypt El Salvador Equatorial Guinea Eritrea
-60            28.3747 40.0652 256.1402      7.5496             4.638 0.64809
-   Estonia Ethiopia Faeroe Islands Falkland Islands (Malvinas)  Fiji Finland
-60  12.324   16.675        0.74013                          NA 1.408  42.454
-     France French Guiana French Polynesia Gabon  Gambia Georgia  Germany
-60 315.4497            NA           0.8757 5.426 0.71082 10.8866 707.4914
-     Ghana Gibraltar  Greece Greenland Grenada Guadeloupe Guatemala Guinea
-60 16.4184        NA 65.7595   0.55541 0.32976         NA   19.5017  3.921
-   Guinea-Bissau Guyana  Haiti Honduras Hong Kong Hungary Iceland    India
-60       0.32243 2.7558 3.0915  11.2188   41.9002 49.3105  3.5587 2612.888
-   Indonesia     Iran     Iraq Ireland  Israel    Italy Jamaica   Japan  Jordan
-60  650.9059 694.6665 189.6065 37.3258 58.6592 340.4025  7.8234 1104.54 24.7286
-   Kazakhstan   Kenya Kiribati Kosovo   Kuwait Kyrgyzstan    Laos Latvia
-60   275.2898 19.7992 0.065952 8.3897 108.8935     9.0463 19.5343 7.6506
-   Lebanon Lesotho Liberia   Libya Liechtenstein Lithuania Luxembourg  Macao
-60 25.6614  2.3889  1.0196 70.5274       0.14902   13.6778     9.7696 1.2128
-   Madagascar Malawi Malaysia Maldives   Mali  Malta Marshall Islands
-60     4.2564 1.6365 267.4943   1.9529 5.8326 1.6488          0.14656
-   Martinique Mauritania Mauritius   Mexico Micronesia (Federated States of)
-60         NA     3.7739    4.5214 468.3221                          0.14656
-   Moldova Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia
-60   5.495  47.2545     2.4769   0.021984 68.7431     7.1011 33.6169  4.1111
-     Nauru   Nepal Netherlands New Caledonia New Zealand Nicaragua  Niger
-60 0.05496 13.5749    152.5094        5.4594     36.8789    5.2226 2.5134
-    Nigeria     Niue North Korea North Macedonia Norway
-60 127.3376 0.007328     52.7642          7.6468 42.706
-   Occupied Palestinian Territory    Oman Pakistan   Palau  Panama
-60                         3.2654 59.2217 206.0612 0.21984 13.3808
-   Papua New Guinea Paraguay   Peru Philippines   Poland Portugal   Qatar
-60           7.8171   8.1367 58.365      144.16 317.6825   47.494 101.019
-   Republic of South Sudan Romania Russian Federation Rwanda R\xe9union
-60                  1.7807 76.8852           1705.031 1.3727         NA
-   Saint Helena Saint Kitts and Nevis Saint Lucia Saint Pierre and Miquelon
-60     0.014656               0.25282     0.50197                  0.065952
-   Saint Vincent and the Grenadines   Samoa Sao Tome and Principe Saudi Arabia
-60                          0.22717 0.27114                0.1429     707.1252
-   Senegal  Serbia Seychelles Sierra Leone Singapore Slovakia Slovenia
-60  12.713 44.2785    0.59357       1.0039   33.7784  33.7785  14.0394
-   Solomon Islands Somalia South Africa South Korea    Spain Sri Lanka   Sudan
-60         0.29312 0.63754     465.4293    646.1023 250.6608   21.2322 21.7725
-   Suriname Swaziland Sweden Switzerland   Syria  Taiwan Tajikistan Tanzania
-60   2.6358    1.1212 41.006     36.7269 28.6771 273.954     8.8568  13.7433
-   Thailand Timor-Leste  Togo   Tonga Trinidad and Tobago Tunisia   Turkey
-60 281.8703     0.67543 2.415 0.16122             40.7829 30.3535 402.6923
-   Turkmenistan Turks and Caicos Islands   Tuvalu Uganda  Ukraine
-60      65.3246                  0.36274 0.010992 5.7319 221.9432
-   United Arab Emirates United Kingdom United States of America Uruguay
-60             219.5566       364.7533                 5262.145  6.4899
-   Uzbekistan Vanuatu Venezuela  Vietnam Wallis and Futuna Islands
-60   108.4291 0.16488   87.6116 341.7888                  0.025648
-   Western Sahara   Yemen Zambia Zimbabwe
-60             NA 11.8372 7.7508   9.7754</code></pre>
+<pre><code>     ID               Name Sex Age Height Weight                          Team
+1 71691 Dimitrios Loundras   M  10     NA     NA Ethnikos Gymnastikos Syllogos
+  NOC       Games Year Season   City      Sport
+1 GRE 1896 Summer 1896 Summer Athina Gymnastics
+                                  Event  Medal
+1 Gymnastics Men's Parallel Bars, Teams Bronze</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # List the countries</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># selected_countries &lt;- names(countries_greater_than_50_2019)</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># # # Display the list of countries</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># selected_countries</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>```</p>
+</section>
+<section id="some-r-posts" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="some-r-posts"><span class="header-section-number">1.4</span> Some R Posts</h2>
+<section id="pareto-chart" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="pareto-chart"><span class="header-section-number">1.4.1</span> Pareto Chart</h3>
+<p>A Pareto chart is a type of bar chart that shows the frequency of different categories in a dataset, ordered by frequency from highest to lowest.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(qcc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Package 'qcc' version 2.7</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Type 'citation("qcc")' for citing this R package in publications.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a data frame with the product and its count</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">product =</span> <span class="fu">c</span>(<span class="st">"Office desks"</span>, <span class="st">"Chairs"</span>, <span class="st">"Filing cabinets"</span>, <span class="st">"Bookcases"</span>),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">count =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">80</span>, <span class="dv">70</span>, <span class="dv">60</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the Pareto chart</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">pareto.chart</span>(df<span class="sc">$</span>count, <span class="at">main =</span> <span class="st">"Pareto Chart of Product Sales"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="assignment1_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   
+Pareto chart analysis for df$count
+    Frequency Cum.Freq. Percentage Cum.Percent.
+  A 100.00000 100.00000   32.25806     32.25806
+  B  80.00000 180.00000   25.80645     58.06452
+  C  70.00000 250.00000   22.58065     80.64516
+  D  60.00000 310.00000   19.35484    100.00000</code></pre>
+</div>
+</div>
+</section>
+<section id="bubble-chart" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="bubble-chart"><span class="header-section-number">1.4.2</span> Bubble Chart</h3>
+<p>Bubble charts are a great way to visualize data with three dimensions. The size of the bubbles represents a third variable, which can be used to show the importance of that variable or to identify relationships between the three variables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load ggplot2 library</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>cars <span class="ot">&lt;-</span> mtcars</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>cars<span class="sc">$</span>name <span class="ot">&lt;-</span> <span class="fu">rownames</span>(cars)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random data</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>),</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">size =</span> <span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">5</span>, <span class="at">max =</span> <span class="dv">20</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a bubble chart</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(x, y, <span class="at">size =</span> size)) <span class="sc">+</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Basic Bubble Chart"</span>, </span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"X-Axis"</span>, </span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Y-Axis"</span>,</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="st">"Y"</span>) <span class="sc">+</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="assignment1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="creating-a-list" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="creating-a-list"><span class="header-section-number">1.4.3</span> Creating a List</h3>
+<p>A list in R is used to gather a variety of objects under one name (that is, the name of the list) in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other in any way.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector with numerics from 1 up to 4</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>my_vector <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrix with numerics from 1 up to 9</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>my_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>, <span class="at">ncol =</span> <span class="dv">3</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(qcc)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a data frame with the product and its count</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>office_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">product =</span> <span class="fu">c</span>(<span class="st">"Office desks"</span>, <span class="st">"Chairs"</span>, <span class="st">"Filing cabinets"</span>, <span class="st">"Bookcases"</span>),</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">count =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">80</span>, <span class="dv">70</span>, <span class="dv">60</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Elements of the built-in data frame </span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>my_df <span class="ot">&lt;-</span> office_df[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,]</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Construct list with these different elements:</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(my_vector,my_matrix,my_df)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 1 2 3 4
+
+[[2]]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+[[3]]
+          product count
+1    Office desks   100
+2          Chairs    80
+3 Filing cabinets    70
+4       Bookcases    60</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
