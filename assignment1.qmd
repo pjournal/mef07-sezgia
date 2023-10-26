@@ -13,31 +13,129 @@ categories:
   - R posts
 ---
 
-::: class
 ## About me
 
 Sezgi Ayhan, as an Investor Relations Coordinator, I leverage my 12 years of experience and expertise in capital markets, corporate finance, and ESG issues to communicate effectively with institutional investors and analysts. I aim to enhance the quality of datasets and their visualization in materials presented to investors and conduct an analysis to measure the impact of company disclosures on investors' decision making process. Most importantly, I seek a deeper understanding of the algorithmic trading and traders' behaviors.
-:::
 
-[![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C)](https://www.linkedin.com/in/sezgi-ayhan-75ab6913)
+[![](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C){fig-align="left"}](https://www.linkedin.com/in/sezgi-ayhan-75ab6913)
 
 ## Creating Data science Portfolio with Quarto
 
-Here's the video that I chose from tutorial videos: [Creating Data science Portfolio with Quarto](https://www.youtube.com/watch?v=xtSFXtDf4cM&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=6)
+**This is the video I selected from the tutorial collection**:
+
+```{r}
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=xtSFXtDf4cM&list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&index=6")
+```
 
 Deepsha Menghani created a blog about herself using quarto, conceptually very similar to this assignment. She designed her page with a navigation toolbar and positioned each sections. She used jolla template in about.qmd to create about page, inserting images and links with icons.. She created projects.qmd and listings with contents of posts which is a directory defined for this blog. She further personalized the page with customized themes and used code tools.
 
 ## Dataset
 
-Dataset that I've chosen to illustrate in this page is a historical dataset on the modern Olympic Games, 15 different data variables were defined in order to be explored and analyzed.
+The dataset I've selected for presentation on this page is a historical dataset pertaining to the modern Olympic Games. It comprises 15 distinct data variables designed for exploration and analysis.
+
+1.  **ID** - Unique number for each athlete
+2.  **Name** - Athlete's name
+3.  **Sex** - M or F
+4.  **Age** - Integer
+5.  **Height** - In centimeters
+6.  **Weight** - In kilograms
+7.  **Team** - Team name
+8.  **NOC** - National Olympic Committee 3-letter code
+9.  **Games** - Year and season
+10. **Year** - Integer
+11. **Season** - Summer or Winter
+12. **City** - Host city
+13. **Sport** - Sport
+14. **Event** - Event
+15. **Medal** - Gold, Silver, Bronze, or NA
+
+[Source Link](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results/data)
+
+**Here's a code that displays athletes who are 10 years old**
 
 ```{r}
-library(ggplot2)
-library(grid)
 library(dplyr)
-
 event <- read.csv("./athlete_events.csv")
-summary(event)
 filter(event, Age == 10)
+```
 
+## Some R Posts
+
+### Pareto Chart
+
+A Pareto chart is a type of bar chart that shows the frequency of different categories in a dataset, ordered by frequency from highest to lowest.
+
+```{r}
+
+library(qcc)
+
+#Create a data frame with the product and its count
+df <- data.frame(
+  product = c("Office desks", "Chairs", "Filing cabinets", "Bookcases"),
+  count = c(100, 80, 70, 60)
+)
+
+# Create the Pareto chart
+pareto.chart(df$count, main = "Pareto Chart of Product Sales")
+```
+
+### Bubble Chart
+
+Bubble charts are a great way to visualize data with three dimensions. The size of the bubbles represents a third variable, which can be used to show the importance of that variable or to identify relationships between the three variables.
+
+```{r}
+# Load ggplot2 library
+library(ggplot2)
+
+# Sample data
+cars <- mtcars
+cars$name <- rownames(cars)
+
+# Generate random data
+set.seed(123)
+data <- data.frame(
+  x = rnorm(10),
+  y = rnorm(10),
+  size = runif(10, min = 5, max = 20)
+)
+
+# Create a bubble chart
+ggplot(data, aes(x, y, size = size)) +
+  geom_point() +
+  scale_size_continuous(range = c(3, 10)) +
+  labs(
+    title = "Basic Bubble Chart", 
+    x = "X-Axis", 
+    y = "Y-Axis",
+    size = "Y") +
+  theme_minimal()
+```
+
+### Creating a List
+
+A list in R is used to gather a variety of objects under one name (that is, the name of the list) in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other in any way.
+
+```{r}
+
+# Vector with numerics from 1 up to 4
+my_vector <- 1:4 
+
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+library(qcc)
+#Create a data frame with the product and its count
+
+office_df <- data.frame(
+  product = c("Office desks", "Chairs", "Filing cabinets", "Bookcases"),
+  count = c(100, 80, 70, 60)
+)
+
+# Elements of the built-in data frame 
+my_df <- office_df[1:4,]
+
+# Construct list with these different elements:
+my_list <- list(my_vector,my_matrix,my_df)
+my_list
 ```
