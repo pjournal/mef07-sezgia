@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sezgi Ayhan">
+<meta name="dcterms.date" content="2023-10-29">
 
 <title>Sezgi Ayhan Progress Journal - 2&nbsp; In Class 1</title>
 <style>
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -143,7 +178,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#preparation" id="toc-preparation" class="nav-link active" data-scroll-target="#preparation"><span class="header-section-number">2.1</span> Preparation</a></li>
+  <li><a href="#fundamentals" id="toc-fundamentals" class="nav-link" data-scroll-target="#fundamentals"><span class="header-section-number">2.2</span> Fundamentals</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -167,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
+      <p class="date">October 29, 2023</p>
     </div>
   </div>
   
@@ -177,8 +219,143 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="preparation" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="preparation"><span class="header-section-number">2.1</span> Preparation</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span> (tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.3     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span> (dplyr)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>raw_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./athlete_events.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="fundamentals" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="fundamentals"><span class="header-section-number">2.2</span> Fundamentals</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 271,116
+Columns: 15
+$ ID     &lt;int&gt; 1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, …
+$ Name   &lt;chr&gt; "A Dijiang", "A Lamusi", "Gunnar Nielsen Aaby", "Edgar Lindenau…
+$ Sex    &lt;chr&gt; "M", "M", "M", "M", "F", "F", "F", "F", "F", "F", "M", "M", "M"…
+$ Age    &lt;int&gt; 24, 23, 24, 34, 21, 21, 25, 25, 27, 27, 31, 31, 31, 31, 33, 33,…
+$ Height &lt;int&gt; 180, 170, NA, NA, 185, 185, 185, 185, 185, 185, 188, 188, 188, …
+$ Weight &lt;dbl&gt; 80, 60, NA, NA, 82, 82, 82, 82, 82, 82, 75, 75, 75, 75, 75, 75,…
+$ Team   &lt;chr&gt; "China", "China", "Denmark", "Denmark/Sweden", "Netherlands", "…
+$ NOC    &lt;chr&gt; "CHN", "CHN", "DEN", "DEN", "NED", "NED", "NED", "NED", "NED", …
+$ Games  &lt;chr&gt; "1992 Summer", "2012 Summer", "1920 Summer", "1900 Summer", "19…
+$ Year   &lt;int&gt; 1992, 2012, 1920, 1900, 1988, 1988, 1992, 1992, 1994, 1994, 199…
+$ Season &lt;chr&gt; "Summer", "Summer", "Summer", "Summer", "Winter", "Winter", "Wi…
+$ City   &lt;chr&gt; "Barcelona", "London", "Antwerpen", "Paris", "Calgary", "Calgar…
+$ Sport  &lt;chr&gt; "Basketball", "Judo", "Football", "Tug-Of-War", "Speed Skating"…
+$ Event  &lt;chr&gt; "Basketball Men's Basketball", "Judo Men's Extra-Lightweight", …
+$ Medal  &lt;chr&gt; NA, NA, NA, "Gold", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#List of first 10 games by city</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>raw_data <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)<span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Games,City)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         Games        City
+1  1992 Summer   Barcelona
+2  2012 Summer      London
+3  1920 Summer   Antwerpen
+4  1900 Summer       Paris
+5  1988 Winter     Calgary
+6  1988 Winter     Calgary
+7  1992 Winter Albertville
+8  1992 Winter Albertville
+9  1994 Winter Lillehammer
+10 1994 Winter Lillehammer</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#List of gold winners among basketball teams in 1972</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>gold_winner <span class="ot">&lt;-</span> raw_data <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">1972</span>, Sport <span class="sc">==</span> <span class="st">"Basketball"</span>, Medal <span class="sc">==</span> <span class="st">"Gold"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>gold_winner</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ID                                Name Sex Age Height Weight
+1    9779      Aleksandr Aleksandrovich Belov   M  20    200    100
+2    9783         Sergey Aleksandrovich Belov   M  28    190     82
+3   13017   Aleksandr Aleksandrovich Boloshev   M  25    205    105
+4   31003             Ivan Vasilyevich Dvorny   M  20    207    105
+5   62797                      Mikheil Korkia   M  23    196     92
+6   63448          Serhiy Ivanovych Kovalenko   M  25    216    111
+7   92184        Modestas Juozapas Paulauskas   M  27    193     90
+8   95971         Anatoliy Ivanovych Polyvoda   M  25    200    105
+9  104466                 Zurab Sak'andelidze   M  27    186     81
+10 127224         Gennady Georgiyevich Volnov   M  32    200     84
+11 132752             Ivan Ivanovich Yedeshko   M  27    196     90
+12 134696 Alzhan Musurbekovich Zharmukhamedov   M  27    207     95
+           Team NOC       Games Year Season   City      Sport
+1  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+2  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+3  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+4  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+5  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+6  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+7  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+8  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+9  Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+10 Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+11 Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+12 Soviet Union URS 1972 Summer 1972 Summer Munich Basketball
+                         Event Medal
+1  Basketball Men's Basketball  Gold
+2  Basketball Men's Basketball  Gold
+3  Basketball Men's Basketball  Gold
+4  Basketball Men's Basketball  Gold
+5  Basketball Men's Basketball  Gold
+6  Basketball Men's Basketball  Gold
+7  Basketball Men's Basketball  Gold
+8  Basketball Men's Basketball  Gold
+9  Basketball Men's Basketball  Gold
+10 Basketball Men's Basketball  Gold
+11 Basketball Men's Basketball  Gold
+12 Basketball Men's Basketball  Gold</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Show mean_ages by year with number of athletes data</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>raw_data <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_age =</span> <span class="fu">mean</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">sd_age =</span> <span class="fu">sd</span>(Age, <span class="at">na.rm =</span><span class="cn">TRUE</span>), <span class="at">ID =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(mean_age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 35 × 4
+    Year mean_age sd_age    ID
+   &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;
+ 1  1896     23.6   4.69   380
+ 2  1980     23.7   5.08  8937
+ 3  1976     23.8   5.55 10502
+ 4  1984     23.9   5.25 11588
+ 5  1988     24.1   5.20 14676
+ 6  1968     24.2   5.76 10479
+ 7  1972     24.3   5.81 11959
+ 8  1992     24.3   5.17 16413
+ 9  1994     24.4   4.20  3160
+10  1996     24.9   5.50 13780
+# ℹ 25 more rows</code></pre>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
