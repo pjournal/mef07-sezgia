@@ -6,3 +6,38 @@ output:
   html_document:
 editor: visual
 ---
+## Preparation 
+```{r}
+library (tidyverse)
+library(lubridate)
+library (dplyr)
+raw_data <- read.csv("./athlete_events.csv")
+```
+## Fundamentals
+```{r}
+raw_data %>% glimpse()
+```
+```{r}
+#List of first 10 games by city
+raw_data %>% 
+  slice (1:10)%>% 
+  select(Games,City)
+```
+```{r}
+#List of gold winners among basketball teams in 1972
+gold_winner <- raw_data %>%
+  filter(Year == 1972, Sport == "Basketball", Medal == "Gold")
+gold_winner
+```
+```{r}
+#Show mean_ages by year with number of athletes data
+raw_data %>% 
+  group_by(Year) %>%
+  summarize(mean_age = mean(Age, na.rm = TRUE), sd_age = sd(Age, na.rm =TRUE), ID = n()) %>%
+  arrange(mean_age)
+
+
+
+
+```
+
