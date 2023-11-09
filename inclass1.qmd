@@ -26,7 +26,7 @@ raw_data %>%
 ```{r}
 #List of gold winners among basketball teams in 1972
 gold_winner <- raw_data %>%
-  filter(Year == 1972, Sport == "Basketball", Medal == "Gold")
+  filter(Year >= "1972" & Year <= "1980", Sport == "Basketball", Medal == "Gold")
 gold_winner
 ```
 ```{r}
