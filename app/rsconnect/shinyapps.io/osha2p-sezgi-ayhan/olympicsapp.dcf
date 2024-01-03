@@ -1,0 +1,12 @@
+name: olympicsapp
+title: olympicsapp
+username: osha2p-sezgi-ayhan
+account: osha2p-sezgi-ayhan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10863344
+bundleId: 8104662
+url: https://osha2p-sezgi-ayhan.shinyapps.io/olympicsapp/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

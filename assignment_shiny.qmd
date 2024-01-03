@@ -1,0 +1,33 @@
+---
+title: "Assignment: Shiny"
+date: "2023-10-01"
+editor: visual
+---
+
+### About App
+
+-   This app aims to help users analyze and explore olympics data interactively.
+
+-   The visualization provides evolution of how the number of sportsperson in different age groups has varied over the years.
+
+------------------------------------------------------------------------
+
+### Command Line
+
+You can run my shiny app using the following command.
+
+```{r}
+#| eval: false
+#| echo: true
+
+library(shiny)
+
+shiny::runGitHub("https://github.com/pjournal/mef07-sezgia", subdir = "/app/app.R")
+
+```
+
+### App Link
+
+[My Shiny App](https://osha2p-sezgi-ayhan.shinyapps.io/olympicsapp/)
+
+Also, you can try the app on [Shinyapps](https://www.shinyapps.io/).

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sezgi Ayhan">
-<meta name="dcterms.date" content="2023-11-09">
+<meta name="dcterms.date" content="2024-01-03">
 
 <title>Sezgi Ayhan Progress Journal - 2&nbsp; In Class 1</title>
 <style>
@@ -179,6 +179,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">In Class 2</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./assignment_shiny.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Assignment: Shiny</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -216,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 9, 2023</p>
+      <p class="date">January 3, 2024</p>
     </div>
   </div>
   
@@ -232,8 +238,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span> (tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.3     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ dplyr     1.1.4     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
 ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
 ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
 ✔ purrr     1.0.2     
@@ -250,25 +256,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="fundamentals" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="fundamentals"><span class="header-section-number">2.2</span> Fundamentals</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 271,116
-Columns: 15
-$ ID     &lt;int&gt; 1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, …
-$ Name   &lt;chr&gt; "A Dijiang", "A Lamusi", "Gunnar Nielsen Aaby", "Edgar Lindenau…
-$ Sex    &lt;chr&gt; "M", "M", "M", "M", "F", "F", "F", "F", "F", "F", "M", "M", "M"…
-$ Age    &lt;int&gt; 24, 23, 24, 34, 21, 21, 25, 25, 27, 27, 31, 31, 31, 31, 33, 33,…
-$ Height &lt;int&gt; 180, 170, NA, NA, 185, 185, 185, 185, 185, 185, 188, 188, 188, …
-$ Weight &lt;dbl&gt; 80, 60, NA, NA, 82, 82, 82, 82, 82, 82, 75, 75, 75, 75, 75, 75,…
-$ Team   &lt;chr&gt; "China", "China", "Denmark", "Denmark/Sweden", "Netherlands", "…
-$ NOC    &lt;chr&gt; "CHN", "CHN", "DEN", "DEN", "NED", "NED", "NED", "NED", "NED", …
-$ Games  &lt;chr&gt; "1992 Summer", "2012 Summer", "1920 Summer", "1900 Summer", "19…
-$ Year   &lt;int&gt; 1992, 2012, 1920, 1900, 1988, 1988, 1992, 1992, 1994, 1994, 199…
-$ Season &lt;chr&gt; "Summer", "Summer", "Summer", "Summer", "Winter", "Winter", "Wi…
-$ City   &lt;chr&gt; "Barcelona", "London", "Antwerpen", "Paris", "Calgary", "Calgar…
-$ Sport  &lt;chr&gt; "Basketball", "Judo", "Football", "Tug-Of-War", "Speed Skating"…
-$ Event  &lt;chr&gt; "Basketball Men's Basketball", "Judo Men's Extra-Lightweight", …
-$ Medal  &lt;chr&gt; NA, NA, NA, "Gold", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</code></pre>
+<pre><code># A tibble: 271,116 × 15
+      ID Name     Sex     Age Height Weight Team  NOC   Games  Year Season City 
+   &lt;int&gt; &lt;chr&gt;    &lt;chr&gt; &lt;int&gt;  &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
+ 1     1 A Dijia… M        24    180     80 China CHN   1992…  1992 Summer Barc…
+ 2     2 A Lamusi M        23    170     60 China CHN   2012…  2012 Summer Lond…
+ 3     3 Gunnar … M        24     NA     NA Denm… DEN   1920…  1920 Summer Antw…
+ 4     4 Edgar L… M        34     NA     NA Denm… DEN   1900…  1900 Summer Paris
+ 5     5 Christi… F        21    185     82 Neth… NED   1988…  1988 Winter Calg…
+ 6     5 Christi… F        21    185     82 Neth… NED   1988…  1988 Winter Calg…
+ 7     5 Christi… F        25    185     82 Neth… NED   1992…  1992 Winter Albe…
+ 8     5 Christi… F        25    185     82 Neth… NED   1992…  1992 Winter Albe…
+ 9     5 Christi… F        27    185     82 Neth… NED   1994…  1994 Winter Lill…
+10     5 Christi… F        27    185     82 Neth… NED   1994…  1994 Winter Lill…
+# ℹ 271,106 more rows
+# ℹ 3 more variables: Sport &lt;chr&gt;, Event &lt;chr&gt;, Medal &lt;chr&gt;</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -294,199 +298,36 @@ $ Medal  &lt;chr&gt; NA, NA, NA, "Gold", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#List of gold winners among basketball teams in 1972</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>gold_winner <span class="ot">&lt;-</span> raw_data <span class="sc">%&gt;%</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">&gt;=</span> <span class="st">"1972"</span> <span class="sc">&amp;</span> Year <span class="sc">&lt;=</span> <span class="st">"1980"</span>, Sport <span class="sc">==</span> <span class="st">"Basketball"</span>, Medal <span class="sc">==</span> <span class="st">"Gold"</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>gold_winner</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">as.tibble</span>(gold_winner)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `as.tibble()` was deprecated in tibble 2.0.0.
+ℹ Please use `as_tibble()` instead.
+ℹ The signature and semantics have changed, see `?as_tibble`.</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       ID                                                 Name Sex Age Height
-1    5173                       Michel Taylor "Tate" Armstrong   M  20    190
-2    8384               Olga Fyodorovna Barysheva-Korostelyova   F  21    168
-3    8384               Olga Fyodorovna Barysheva-Korostelyova   F  25    168
-4    9779                       Aleksandr Aleksandrovich Belov   M  20    200
-5    9783                          Sergey Aleksandrovich Belov   M  28    190
-6   10964                              Vida Beselien (ulskyt-)   F  23    190
-7   13017                    Aleksandr Aleksandrovich Boloshev   M  25    205
-8   16109                                William Quinn Buckner   M  21    190
-9   18483                            Kenneth Alan "Kenny" Carr   M  20    200
-10  23251                                          Kreimir osi   M  31    209
-11  24983                                       Draen Dalipagi   M  28    197
-12  25309                                Adrian Delano Dantley   M  21    195
-13  25511                            Tamra Dauniene (Kaagina-)   F  24    190
-14  25728                                    Walter Paul Davis   M  21    195
-15  27310                                        Mirza Delibai   M  26    197
-16  31003                              Ivan Vasilyevich Dvorny   M  20    207
-17  35076            Nelli Vasilyevna Feryabnikova (Bilmayer-)   F  27    193
-18  35076            Nelli Vasilyevna Feryabnikova (Bilmayer-)   F  31    193
-19  36237                      Philip Jackson "Phil" Ford, Jr.   M  20    188
-20  43340                              Ernest "Ernie" Grunfeld   M  21    198
-21  50688                       Phillip Gregory "Phil" Hubbard   M  19    200
-22  52923          Tatyana Mikhaylovna Ivinskaya (-Beloshapko)   F  22    185
-23  54636                                         eljko Jerkov   M  26    208
-24  59551                                       Dragan Kianovi   M  25    191
-25  61401             Nataliya Henrykhivna Klymova (Nazemblo-)   F  25    185
-26  61463                                Andrija "Andro" Knego   M  23    205
-27  62797                                       Mikheil Korkia   M  23    196
-28  63448                           Serhiy Ivanovych Kovalenko   M  25    216
-29  64301                               Dujam "Duje" Krstulovi   M  27    203
-30  65055                     Mitchell William "Mitch" Kupchak   M  22    208
-31  65209                           Rasa Vasylivna Kurv'iakova   F  30    185
-32  65853                          Thomas Joseph "Tom" LaGarde   M  21    208
-33  76943                                      Scott Glenn May   M  22    200
-34  84399                                 Mihovil Naki-Vojnovi   M  24    204
-35  90166            Tatyana Nikolayevna Ovechkina (Kabayeva-)   F  26    174
-36  90166            Tatyana Nikolayevna Ovechkina (Kabayeva-)   F  30    174
-37  92184                         Modestas Juozapas Paulauskas   M  27    193
-38  95971                          Anatoliy Ivanovych Polyvoda   M  25    200
-39  98195                                     Ratko Radovanovi   M  23    208
-40 102003          Lyudmila Nikolayevna Rogozhina (-Muravyova)   F  21    170
-41 103535                             Angel Rupien (Janknait-)   F  24    168
-42 103535                             Angel Rupien (Janknait-)   F  28    168
-43 104466                                  Zurab Sak'andelidze   M  27    186
-44 108551                                      Ujana Semjonova   F  24    210
-45 108551                                      Ujana Semjonova   F  28    210
-46 109303              Lyubov Georgyevna Sharmay (Goncharova-)   F  24    183
-47 109591                      Steven Bernard "Steve" Sheppard   M  22    198
-48 110102 Nadezhda Aleksandrovna Shuvayeva-Olkhova (-Baranova)   F  23    175
-49 110102 Nadezhda Aleksandrovna Shuvayeva-Olkhova (-Baranova)   F  27    175
-50 111807                                         Branko Skroe   M  25    195
-51 111916                                         Zoran Slavni   M  30    181
-52 116297                           Olga Leonidovna Sukharnova   F  21    192
-53 116297                           Olga Leonidovna Sukharnova   F  25    192
-54 127224                          Gennady Georgiyevich Volnov   M  32    200
-55 132752                              Ivan Ivanovich Yedeshko   M  27    196
-56 133788                       Nadezhda Dmitriyevna Zakharova   F  31    180
-57 133791                  Tetiana Pavlivna Zakharova-Nadyrova   F  25    180
-58 133791                  Tetiana Pavlivna Zakharova-Nadyrova   F  29    180
-59 134696                  Alzhan Musurbekovich Zharmukhamedov   M  27    207
-60 135138                                             Rajko ii   M  25    210
-   Weight          Team NOC       Games Year Season     City      Sport
-1      77 United States USA 1976 Summer 1976 Summer Montreal Basketball
-2      67  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-3      67  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-4     100  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-5      82  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-6      91  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-7     105  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-8      92 United States USA 1976 Summer 1976 Summer Montreal Basketball
-9     102 United States USA 1976 Summer 1976 Summer Montreal Basketball
-10     94    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-11     95    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-12     95 United States USA 1976 Summer 1976 Summer Montreal Basketball
-13     75  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-14     86 United States USA 1976 Summer 1976 Summer Montreal Basketball
-15     86    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-16    105  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-17     82  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-18     82  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-19     77 United States USA 1976 Summer 1976 Summer Montreal Basketball
-20    102 United States USA 1976 Summer 1976 Summer Montreal Basketball
-21     88 United States USA 1976 Summer 1976 Summer Montreal Basketball
-22     80  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-23     94    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-24     87    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-25     90  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-26     96    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-27     92  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-28    111  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-29     NA    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-30    104 United States USA 1976 Summer 1976 Summer Montreal Basketball
-31     76  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-32     97 United States USA 1976 Summer 1976 Summer Montreal Basketball
-33     99 United States USA 1976 Summer 1976 Summer Montreal Basketball
-34     95    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-35     69  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-36     69  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-37     90  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-38    105  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-39    107    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-40     64  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-41     68  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-42     68  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-43     81  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-44    128  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-45    128  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-46     77  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-47     95 United States USA 1976 Summer 1976 Summer Montreal Basketball
-48     67  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-49     67  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-50     89    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-51     72    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-52     94  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-53     94  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-54     84  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-55     90  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-56     81  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-57     81  Soviet Union URS 1976 Summer 1976 Summer Montreal Basketball
-58     81  Soviet Union URS 1980 Summer 1980 Summer   Moskva Basketball
-59     95  Soviet Union URS 1972 Summer 1972 Summer   Munich Basketball
-60    110    Yugoslavia YUG 1980 Summer 1980 Summer   Moskva Basketball
-                           Event Medal
-1    Basketball Men's Basketball  Gold
-2  Basketball Women's Basketball  Gold
-3  Basketball Women's Basketball  Gold
-4    Basketball Men's Basketball  Gold
-5    Basketball Men's Basketball  Gold
-6  Basketball Women's Basketball  Gold
-7    Basketball Men's Basketball  Gold
-8    Basketball Men's Basketball  Gold
-9    Basketball Men's Basketball  Gold
-10   Basketball Men's Basketball  Gold
-11   Basketball Men's Basketball  Gold
-12   Basketball Men's Basketball  Gold
-13 Basketball Women's Basketball  Gold
-14   Basketball Men's Basketball  Gold
-15   Basketball Men's Basketball  Gold
-16   Basketball Men's Basketball  Gold
-17 Basketball Women's Basketball  Gold
-18 Basketball Women's Basketball  Gold
-19   Basketball Men's Basketball  Gold
-20   Basketball Men's Basketball  Gold
-21   Basketball Men's Basketball  Gold
-22 Basketball Women's Basketball  Gold
-23   Basketball Men's Basketball  Gold
-24   Basketball Men's Basketball  Gold
-25 Basketball Women's Basketball  Gold
-26   Basketball Men's Basketball  Gold
-27   Basketball Men's Basketball  Gold
-28   Basketball Men's Basketball  Gold
-29   Basketball Men's Basketball  Gold
-30   Basketball Men's Basketball  Gold
-31 Basketball Women's Basketball  Gold
-32   Basketball Men's Basketball  Gold
-33   Basketball Men's Basketball  Gold
-34   Basketball Men's Basketball  Gold
-35 Basketball Women's Basketball  Gold
-36 Basketball Women's Basketball  Gold
-37   Basketball Men's Basketball  Gold
-38   Basketball Men's Basketball  Gold
-39   Basketball Men's Basketball  Gold
-40 Basketball Women's Basketball  Gold
-41 Basketball Women's Basketball  Gold
-42 Basketball Women's Basketball  Gold
-43   Basketball Men's Basketball  Gold
-44 Basketball Women's Basketball  Gold
-45 Basketball Women's Basketball  Gold
-46 Basketball Women's Basketball  Gold
-47   Basketball Men's Basketball  Gold
-48 Basketball Women's Basketball  Gold
-49 Basketball Women's Basketball  Gold
-50   Basketball Men's Basketball  Gold
-51   Basketball Men's Basketball  Gold
-52 Basketball Women's Basketball  Gold
-53 Basketball Women's Basketball  Gold
-54   Basketball Men's Basketball  Gold
-55   Basketball Men's Basketball  Gold
-56 Basketball Women's Basketball  Gold
-57 Basketball Women's Basketball  Gold
-58 Basketball Women's Basketball  Gold
-59   Basketball Men's Basketball  Gold
-60   Basketball Men's Basketball  Gold</code></pre>
+<pre><code># A tibble: 60 × 15
+      ID Name     Sex     Age Height Weight Team  NOC   Games  Year Season City 
+   &lt;int&gt; &lt;chr&gt;    &lt;chr&gt; &lt;int&gt;  &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
+ 1  5173 "Michel… M        20    190     77 Unit… USA   1976…  1976 Summer Mont…
+ 2  8384 "Olga F… F        21    168     67 Sovi… URS   1976…  1976 Summer Mont…
+ 3  8384 "Olga F… F        25    168     67 Sovi… URS   1980…  1980 Summer Mosk…
+ 4  9779 "Aleksa… M        20    200    100 Sovi… URS   1972…  1972 Summer Muni…
+ 5  9783 "Sergey… M        28    190     82 Sovi… URS   1972…  1972 Summer Muni…
+ 6 10964 "Vida B… F        23    190     91 Sovi… URS   1980…  1980 Summer Mosk…
+ 7 13017 "Aleksa… M        25    205    105 Sovi… URS   1972…  1972 Summer Muni…
+ 8 16109 "Willia… M        21    190     92 Unit… USA   1976…  1976 Summer Mont…
+ 9 18483 "Kennet… M        20    200    102 Unit… USA   1976…  1976 Summer Mont…
+10 23251 "Kreimi… M        31    209     94 Yugo… YUG   1980…  1980 Summer Mosk…
+# ℹ 50 more rows
+# ℹ 3 more variables: Sport &lt;chr&gt;, Event &lt;chr&gt;, Medal &lt;chr&gt;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Show mean_ages by year with number of athletes data</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>raw_data <span class="sc">%&gt;%</span> </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_age =</span> <span class="fu">mean</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">sd_age =</span> <span class="fu">sd</span>(Age, <span class="at">na.rm =</span><span class="cn">TRUE</span>), <span class="at">ID =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(mean_age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Show mean_ages by year with number of athletes data</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>raw_data <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_age =</span> <span class="fu">mean</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">sd_age =</span> <span class="fu">sd</span>(Age, <span class="at">na.rm =</span><span class="cn">TRUE</span>), <span class="at">ID =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(mean_age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 35 × 4
     Year mean_age sd_age    ID
