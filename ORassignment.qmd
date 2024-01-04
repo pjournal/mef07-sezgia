@@ -1,0 +1,57 @@
+---
+title: "Operational Research Assignment"
+subtitle: "Identify the Right Portfolio for Each Customer, While Addressing Compliance"
+editor: visual
+---
+
+## Business Case Summary:
+
+The swissQuant Group develops and delivers intelligent technology products for Risk Modelling & Analytics, Trading & Risk Management and Hedging & Procurement.
+
+In this business case; their primary objective is to implement a solution designed to alter the process of suggesting personalized investment portfolios for private banking customers.
+
+This solution aims to integrate customer-specific objectives, risk profiles, and available assets while adhering to the stringent policies and regulations governing the banking industry.
+
+## Problem Description:
+
+**Problem Description:** Structuring a portfolio by formulating it as a mathematical optimization problem and optimizing it with respect to target function in order to maximize the portfolio's rate of return subject to risk limits.
+
+In this business case; solution provider Gurabi solves a mixed-integer quadratic problem (MIQP).
+
+Portfolio optimization results in a MIQP as it is characterised by a quadratic objective function with 1,000 to 10,000 variables and almost as many additional linear conditions, and also some of the variables must only be represented as integer values.
+
+**Key Considerations to choose Gurabi's Solutions:** Better solver performance, higher speed, the ability to scale the project demands, stability and reliability in solving complex problems, better quality compared to its alternatives.
+
+## Solution Approach:
+
+**Integration Process of Gurabi's Solution:**
+
+1.  Creation of a customer profile
+
+2.  Presenting opportunities and risks interactively in the profile, applying stress tests to understand bank risks
+
+3.  Adding customer-specific restrictions and general bank rules and creating a diverse set of conditions
+
+4.  Solving a mathematical optimization model, optimizing the portfolio to maximize return within risk limits.
+
+5.  Presenting the optimized portfolio, featuring various investment strategies, risks, and benefits
+
+## Benefits:
+
+1.  **Efficiency in Problem Solving:** found solutions for 98% of feasible problems[^orassignment-1] within 20 seconds, showcasing its efficiency in problem-solving.
+2.  **Better Performance compared to Competitor:** The competitor could achieve solution times of less than 20 seconds for only 38% of the models tested.
+3.  **Optimal Solutions:** found the optimum solution for 90% of the test problems, surpassing the competitor's performance, which could only achieve this for 55% of the problems.
+4.  **Higher Returns:** 1% higher returns compared to another commercial solver in portfolio optimization, In 7% of feasible problems
+
+[^orassignment-1]:
+    -   A feasible problem is defined as a portfolio optimization with at least one solution that fulfills all restrictions.
+
+## 
+
+## References
+
+[Business Case](https://p1.aprimocdn.net/gurobi/7600394d-61f0-4c60-a479-b021013cb1e3/originalfile/Case-Study---SwissQuant---Partner-SwissQuant.pdf)
+
+[Proven Techniques for Solving Financial Problems with Gurobi](https://www.youtube.com/watch?v=SUS8Kk3doDk)
+
+[Mixed Integer Programming Basics](https://www.gurobi.com/resources/mixed-integer-programming-mip-a-primer-on-the-basics)
