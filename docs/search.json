@@ -61,5 +61,54 @@
     "title": "4  Assignment: Shiny",
     "section": "",
     "text": "4.0.1 About App\n\nThis app aims to help users analyze and explore olympics data interactively.\nThe visualization provides evolution of how the number of sportsperson in different age groups has varied over the years.\n\n\n\n\n4.0.2 Command Line\nYou can run my shiny app using the following command.\n\nlibrary(shiny)\n\nshiny::runGitHub(\"https://github.com/pjournal/mef07-sezgia\", subdir = \"/app/app.R\")\n\n\n\n4.0.3 App Link\nMy Shiny App\nAlso, you can try the app on Shinyapps."
+  },
+  {
+    "objectID": "orassignment.html#business-case-summary",
+    "href": "orassignment.html#business-case-summary",
+    "title": "5  Operational Research Assignment",
+    "section": "5.1 Business Case Summary:",
+    "text": "5.1 Business Case Summary:\nThe swissQuant Group develops and delivers intelligent technology products for Risk Modelling & Analytics, Trading & Risk Management and Hedging & Procurement.\nIn this business case; their primary objective is to implement a solution designed to alter the process of suggesting personalized investment portfolios for private banking customers.\nThis solution aims to integrate customer-specific objectives, risk profiles, and available assets while adhering to the stringent policies and regulations governing the banking industry."
+  },
+  {
+    "objectID": "orassignment.html#problem-description",
+    "href": "orassignment.html#problem-description",
+    "title": "5  Operational Research Assignment",
+    "section": "5.2 Problem Description:",
+    "text": "5.2 Problem Description:\nProblem Description: Structuring a portfolio by formulating it as a mathematical optimization problem and optimizing it with respect to target function in order to maximize the portfolio’s rate of return subject to risk limits.\nIn this business case; solution provider Gurabi solves a mixed-integer quadratic problem (MIQP).\nPortfolio optimization results in a MIQP as it is characterised by a quadratic objective function with 1,000 to 10,000 variables and almost as many additional linear conditions, and also some of the variables must only be represented as integer values.\nKey Considerations to choose Gurabi’s Solutions: Better solver performance, higher speed, the ability to scale the project demands, stability and reliability in solving complex problems, better quality compared to its alternatives."
+  },
+  {
+    "objectID": "orassignment.html#solution-approach",
+    "href": "orassignment.html#solution-approach",
+    "title": "5  Operational Research Assignment",
+    "section": "5.3 Solution Approach:",
+    "text": "5.3 Solution Approach:\nIntegration Process of Gurabi’s Solution:\n\nCreation of a customer profile\nPresenting opportunities and risks interactively in the profile, applying stress tests to understand bank risks\nAdding customer-specific restrictions and general bank rules and creating a diverse set of conditions\nSolving a mathematical optimization model, optimizing the portfolio to maximize return within risk limits.\nPresenting the optimized portfolio, featuring various investment strategies, risks, and benefits"
+  },
+  {
+    "objectID": "orassignment.html#benefits",
+    "href": "orassignment.html#benefits",
+    "title": "5  Operational Research Assignment",
+    "section": "5.4 Benefits:",
+    "text": "5.4 Benefits:\n\nEfficiency in Problem Solving: found solutions for 98% of feasible problems1 within 20 seconds, showcasing its efficiency in problem-solving.\nBetter Performance compared to Competitor: The competitor could achieve solution times of less than 20 seconds for only 38% of the models tested.\nOptimal Solutions: found the optimum solution for 90% of the test problems, surpassing the competitor’s performance, which could only achieve this for 55% of the problems.\nHigher Returns: 1% higher returns compared to another commercial solver in portfolio optimization, In 7% of feasible problems"
+  },
+  {
+    "objectID": "orassignment.html#section",
+    "href": "orassignment.html#section",
+    "title": "5  Operational Research Assignment",
+    "section": "5.5 ",
+    "text": "5.5"
+  },
+  {
+    "objectID": "orassignment.html#references",
+    "href": "orassignment.html#references",
+    "title": "5  Operational Research Assignment",
+    "section": "5.5 References",
+    "text": "5.5 References\nBusiness Case\nProven Techniques for Solving Financial Problems with Gurobi\nMixed Integer Programming Basics"
+  },
+  {
+    "objectID": "orassignment.html#footnotes",
+    "href": "orassignment.html#footnotes",
+    "title": "5  Operational Research Assignment",
+    "section": "",
+    "text": "A feasible problem is defined as a portfolio optimization with at least one solution that fulfills all restrictions.\n\n↩︎"
   }
 ]

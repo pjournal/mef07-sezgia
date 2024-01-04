@@ -46,8 +46,6 @@ Portfolio optimization results in a MIQP as it is characterised by a quadratic o
 [^orassignment-1]:
     -   A feasible problem is defined as a portfolio optimization with at least one solution that fulfills all restrictions.
 
-## 
-
 ## References
 
 [Business Case](https://p1.aprimocdn.net/gurobi/7600394d-61f0-4c60-a479-b021013cb1e3/originalfile/Case-Study---SwissQuant---Partner-SwissQuant.pdf)
