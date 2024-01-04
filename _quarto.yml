@@ -12,7 +12,7 @@ book:
     - inclass1.qmd
     - inclass2.qmd
     - assignment_shiny.qmd
-    - ORassignment.qmd
+    - orassignment.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]
