@@ -6,6 +6,8 @@ This progress journal covers Sezgi Ayhan during their term at [BDA 503 Fall 2023
 
 Each section is an assignment or an individual work.
 
+[My Repository](https://github.com/pjournal/mef07-sezgia)
+
 <!-- IF THIS IS A GROUP UNCOMMENT BELOW -->
 
 <!-- # Group Members
