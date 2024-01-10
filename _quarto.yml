@@ -5,7 +5,7 @@ project:
   
 
 book:
-  title: "Final Exam - Sezgi Ayhan"
+  title: "Sezgi Ayhan Progress Journal"
   repo-url: https://github.com/pjournal/mef07-sezgia
   chapters:
     - index.qmd
