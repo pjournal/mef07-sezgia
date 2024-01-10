@@ -2,9 +2,10 @@ project:
   type: book
   output-dir: docs
   render: ["!app/"]
+  
 
 book:
-  title: "Sezgi Ayhan Progress Journal"
+  title: "Final Exam - Sezgi Ayhan"
   repo-url: https://github.com/pjournal/mef07-sezgia
   chapters:
     - index.qmd
@@ -13,6 +14,7 @@ book:
     - inclass2.qmd
     - assignment_shiny.qmd
     - orassignment.qmd
+    - final.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]
@@ -20,5 +22,5 @@ book:
 format:
   html:
     theme: cosmo
-  
+number-sections: false
 

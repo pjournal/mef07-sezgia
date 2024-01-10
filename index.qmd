@@ -17,3 +17,4 @@ Each section is an assignment or an individual work.
 # Group Project Details
 
 Our group project is [PROJECT NAME]. [SHORT DESCRIPTION] -->
+
